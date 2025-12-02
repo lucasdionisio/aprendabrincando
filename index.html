@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jogos JClic - Aprenda Brincando</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f6fa;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    /* BANNER */
+    header img {
+      width: 100%;
+      height: 680px; /* 18cm aprox. */
+      object-fit: cover;
+      display: block;
+    }
+
+    /* MENU LATERAL ESQUERDO */
+    .menu-lateral {
+      position: fixed;
+      left: 20px; /* Agora no lado ESQUERDO */
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 1000;
+    }
+
+    .menu-lateral a {
+      text-decoration: none;
+    }
+
+    .menu-lateral button {
+      background: linear-gradient(to right, #6e34f5, #e147d0);
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .menu-lateral button:hover {
+      background: linear-gradient(to right, #532be0, #cc3cc0);
+      transform: scale(1.05);
+    }
+
+    /* CONTEÚDO PRINCIPAL */
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    p.subtitulo {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #ffffff, #f1f3f8);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      padding: 20px;
+      width: 300px;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card span {
+      display: inline-block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .card h2 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+      color: #444;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .card a button {
+      background: linear-gradient(to right, #6e34f5, #e147d0);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .card a button:hover {
+      opacity: 0.9;
+    }
+
+    footer {
+      background-color: #f0f0f0;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 90%;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .card h2 {
+        font-size: 1.1rem;
+      }
+
+      .card p {
+        font-size: 0.9rem;
+      }
+
+      header img {
+        height: auto;
+        max-height: 300px;
+      }
+
+      .menu-lateral {
+        display: none; /* Esconde no celular */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MENU LATERAL ESQUERDO -->
+  <div class="menu-lateral">
+    <a href="#topo"><button>Início ⬆️</button></a>
+    <a href="#jogos"><button>Ver Jogos 🎮</button></a>
+  </div>
+
+  <!-- BANNER -->
+  <header id="topo">
+    <img src="imagens/banneeraprendabrinccando.png" alt="Banner Aprenda Brincando">
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="container" id="jogos">
+    <h1>Jogos Lacunas no JClic</h1>
+    <p class="subtitulo">Escolha um dos jogos abaixo para começar. Eles foram pensados para unir aprendizado, raciocínio lógico e diversão em sala de aula.</p>
+
+    <div class="cards">
+      <!-- CARD 1 -->
+      <div class="card">
+        <span>🎯 Jogo 1</span>
+        <img src="imagens/jogo1.png" alt="Desafio das Palavras">
+        <h2>Quebra Cabeça Logico</h2>
+        <p>Trabalhe vocabulário e atenção com um desafio dinâmico e visualmente atrativo para os estudantes.</p>
+        <a href="https://curious-lollipop-75d872.netlify.app/" target="_blank">
+          <button>Jogar agora</button>
+        </a>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card">
+        <span>🌸 Jogo 2</span>
+        <img src="imagens/jogo3.png" alt="Complete as Lacunas">
+        <h2>Jogo de palavras</h2>
+        <p>Aprenda para que serve cada pesa de computador.</p>
+        <a href="https://prismatic-kangaroo-67067b.netlify.app/" target="_blank">
+          <button>Jogar agora</button>
+        </a>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="card">
+        <span>🚀 Jogo 3</span>
+        <img src="imagens/jogo2.png" alt="Quebra-cabeça Lógico">
+        <h2>Quebra-cabeça Duplo</h2>
+        <p>Estimule o raciocínio logico e a resolução de problemas em um ambiente lúdico e instigante.</p>
+        <a href="https://capable-baklava-e99177.netlify.app/" target="_blank">
+          <button>Jogar agora</button>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    © 2025 Aprenda Brincando. Todos os direitos reservados para o Professor Lucas Dionísio.
+  </footer>
+
+</body>
+</html>
