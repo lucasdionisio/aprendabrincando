@@ -1,266 +1,155 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jogos JClic - Aprenda Brincando</title>
+  <meta charset="UTF-8">
+  <title>duplo_t1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://clic.xtec.cat/dist/jclic.js/jclic.min.js"></script>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f5f6fa;
-      color: #333;
-      scroll-behavior: smooth;
+      position: relative;
     }
 
-    header img {
-      width: 100%;
-      height: 680px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .menu-lateral {
+    /* Botões fixos */
+    .botoes-fixos {
       position: fixed;
+      bottom: 20px;
       left: 20px;
-      top: 50%;
-      transform: translateY(-50%);
       display: flex;
       flex-direction: column;
       gap: 15px;
       z-index: 1000;
     }
 
-    .menu-lateral a {
+    .botoes-fixos button,
+    .botoes-fixos a {
       text-decoration: none;
-    }
-
-    .menu-lateral button {
+      border: none;
       background: linear-gradient(to right, #6e34f5, #e147d0);
       color: white;
-      border: none;
       padding: 12px 18px;
       border-radius: 30px;
       font-size: 14px;
       font-weight: bold;
       cursor: pointer;
       transition: all 0.3s;
+      text-align: center;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    .menu-lateral button:hover {
+    .botoes-fixos button:hover,
+    .botoes-fixos a:hover {
       background: linear-gradient(to right, #532be0, #cc3cc0);
       transform: scale(1.05);
     }
 
-    .container {
-      max-width: 1200px;
-      margin: 30px auto;
-      padding: 0 20px;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 1.8rem;
-      margin-bottom: 10px;
-    }
-
-    p.subtitulo {
-      font-size: 1rem;
-      color: #555;
-      margin-bottom: 40px;
-    }
-
-    .cards {
+    .botao-ajuda {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+      align-items: center;
+      gap: 8px;
     }
 
-    .card {
-      background: linear-gradient(145deg, #ffffff, #f1f3f8);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      border-radius: 15px;
-      padding: 20px;
-      width: 300px;
-      transition: transform 0.2s;
-      flex: 1 1 calc(33.33% - 40px);
-      max-width: 300px;
+    .botao-ajuda img {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card span {
-      display: inline-block;
-      margin-bottom: 10px;
-      font-weight: bold;
-      font-size: 0.9rem;
-    }
-
-    .card h2 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      font-size: 0.95rem;
-      margin-bottom: 15px;
-      color: #444;
-    }
-
-    .card img {
+    /* Modal de Ajuda */
+    .modal-ajuda {
+      display: none; /* esconde por padrão */
+      position: fixed;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: 180px;
-      object-fit: cover;
+      height: 100%;
+      background-color: rgba(0,0,0,0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+
+    .modal-ajuda img {
+      max-width: 90%;
+      max-height: 90%;
       border-radius: 10px;
-      margin-bottom: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
     }
 
-    .card a button {
-      background: linear-gradient(to right, #6e34f5, #e147d0);
-      border: none;
+    .modal-ajuda .fechar {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
       color: white;
-      padding: 10px 20px;
-      border-radius: 20px;
-      font-size: 0.9rem;
       cursor: pointer;
-      transition: 0.3s;
     }
 
-    .card a button:hover {
-      opacity: 0.9;
-    }
-
-    footer {
-      background-color: #f0f0f0;
-      text-align: center;
-      padding: 15px;
-      margin-top: 50px;
-      font-size: 0.85rem;
-      color: #666;
-    }
-
-    @media (max-width: 768px) {
-      .cards {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .card {
-        width: 90%;
-        max-width: none;
-      }
-
-      header img {
-        height: auto;
-        max-height: 300px;
-      }
-
-      .menu-lateral {
-        display: none;
+    @media (max-width: 600px) {
+      .botoes-fixos {
+        flex-direction: row;
+        bottom: 10px;
+        left: 10px;
       }
     }
   </style>
 </head>
-<body>
+<body>  <a href= "https://lucasdionisio.github.io/aprendabrincando/" 
+     style="
+      background: linear-gradient(45deg, #ff4b2b, #ff416c);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 40px;
+      padding: 10px 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      font-size: 15px;
+      display: inline-block;
+     "
+     onmouseover="this.style.transform='scale(1.08)'; this.style.boxShadow='0 6px 14px rgba(255,65,108,0.4)'"
+     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 10px rgba(0,0,0,0.2)'">
+     ⬅️ VOLTAR
+  </a>
 
-  <!-- MENU LATERAL -->
-  <div class="menu-lateral">
-    <a href="#topo"><button>Início ⬆️</button></a>
-    <a href="#jogos"><button>Ver Jogos 🎮</button></a>
+  <!-- Projeto JClic -->
+  <div class="JClic" data-project="duplo_t1.jclic"></div>
+
+  <!-- Botões fixos -->
+  <div class="botoes-fixos">
+    <a href="index.html"
+    <button class="botao-ajuda" onclick="abrirAjuda()">
+      <img src="ubundu-resized.jpg" alt="Ajuda">
+      Ajuda
+    </button>
   </div>
 
-  <!-- BANNER -->
-  <header id="topo">
-    <img src="imagens/banneeraprendabrinccando.png" alt="Banner Aprenda Brincando">
-  </header>
+  <!-- Modal da Ajuda -->
+  <div class="modal-ajuda" id="modalAjuda">
+    <span class="fechar" onclick="fecharAjuda()">×</span>
+    <img src="ubundu-resized.jpg" alt="Imagem de Ajuda">
+  </div>
 
-  <!-- CONTEÚDO -->
-  <main class="container" id="jogos">
-    <h1>Jogos Lacunas no JClic</h1>
-    <p class="subtitulo">Escolha um dos jogos abaixo para começar. Eles foram pensados para unir aprendizado, raciocínio lógico e diversão em sala de aula.</p>
+  <!-- Scripts -->
+  <script>
+    function abrirAjuda() {
+      document.getElementById('modalAjuda').style.display = 'flex';
+    }
 
-    <div class="cards">
-      <!-- CARD 1 -->
-      <div class="card">
-        <span>🎯 Jogo 1</span>
-        <img src="imagens/jogo1.png" alt="Desafio das Palavras">
-        <h2>Quebra Cabeça Lógico</h2>
-        <p>Trabalhe vocabulário e atenção com um desafio dinâmico e visualmente atrativo para os estudantes.</p>
-        <a href="importarhtml/index.html" target="_blank">
-          <button>Jogar agora</button>
-        </a>
-      </div>
+    function fecharAjuda() {
+      document.getElementById('modalAjuda').style.display = 'none';
+    }
 
-      <!-- CARD 2 -->
-      <div class="card">
-        <span>🌸 Jogo 2</span>
-        <img src="imagens/jogo3.png" alt="Complete as Lacunas">
-        <h2>Jogo de Palavras</h2>
-        <p>Aprenda para que serve cada peça do computador em um desafio educativo e divertido.</p>
-        <a href="COMPLEXA_LUCAS/index.html" target="_blank">
-          <button>Jogar agora</button>
-        </a>
-      </div>
-
-      <!-- CARD 3 -->
-      <div class="card">
-        <span>🚀 Jogo 3</span>
-        <img src="imagens/jogo2.png" alt="Quebra-cabeça Lógico">
-        <h2>Quebra-cabeça Duplo</h2>
-        <p>Estimule o raciocínio lógico e a resolução de problemas em um ambiente lúdico e instigante.</p>
-        <a href="LACUNAWEB/index.html" target="_blank">
-          <button>Jogar agora</button>
-        </a>
-      </div>
-
-      <!-- CARD 4 -->
-      <div class="card">
-        <span>🧠 Jogo 4</span>
-        <img src="imagens/indent.png" alt="Jogo de Lógica com Código">
-        <h2>Desafio de Lógica Visual</h2>
-        <p>Use pistas visuais para organizar blocos de código corretamente. Ideal para desenvolver raciocínio lógico e atenção aos detalhes.</p>
-        <a href="grelhab/index.html" target="_blank">
-          <button>Jogar agora</button>
-        </a>
-      </div>
-
-      <!-- CARD 5 -->
-      <div class="card">
-        <span>🖥️ Jogo 5</span>
-        <img src="imagens/simples.png" alt="Identificação de Peças de Computador">
-        <h2>Monte seu Computador</h2>
-        <p>Um jogo interativo para ajudar os alunos a reconhecer e posicionar corretamente as principais peças do computador.</p>
-        <a href="simpless/index.html" target="_blank">
-          <button>Jogar agora</button>
-        </a>
-      </div>
-
-      <!-- CARD 6 -->
-      <div class="card">
-        <span>📖 Jogo 6</span>
-        <img src="imagens/texto.png" alt="Jogo de Compreensão de Texto">
-        <h2>Missão: Texto Secreto</h2>
-        <p>Leia atentamente e preencha as lacunas para decifrar mensagens escondidas. Uma forma divertida de trabalhar leitura e interpretação.</p>
-        <a href="lacunassopa/index.html" target="_blank">
-          <button>Jogar agora</button>
-        </a>
-      </div>
-    </div>
-  </main>
-
-  <!-- RODAPÉ -->
-  <footer>
-    © 2025 Aprenda Brincando. Todos os direitos reservados para o Professor Lucas Dionísio.
-  </footer>
+    // Fechar modal clicando fora da imagem
+    window.onclick = function(event) {
+      const modal = document.getElementById('modalAjuda');
+      if (event.target === modal) {
+        fecharAjuda();
+      }
+    }
+  </script>
 
 </body>
 </html>
