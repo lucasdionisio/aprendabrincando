@@ -1,155 +1,284 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>duplo_t1</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://clic.xtec.cat/dist/jclic.js/jclic.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jogos JClic - Aprenda Brincando</title>
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: Arial, sans-serif;
-      position: relative;
+      padding: 0;
     }
 
-    /* Botões fixos */
-    .botoes-fixos {
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f6fa;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header img {
+      width: 100%;
+      height: 680px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .menu-lateral {
       position: fixed;
-      bottom: 20px;
       left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
       display: flex;
       flex-direction: column;
       gap: 15px;
       z-index: 1000;
     }
 
-    .botoes-fixos button,
-    .botoes-fixos a {
+    .menu-lateral a {
       text-decoration: none;
-      border: none;
+    }
+
+    .menu-lateral button {
       background: linear-gradient(to right, #6e34f5, #e147d0);
       color: white;
+      border: none;
       padding: 12px 18px;
       border-radius: 30px;
       font-size: 14px;
       font-weight: bold;
       cursor: pointer;
       transition: all 0.3s;
-      text-align: center;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    .botoes-fixos button:hover,
-    .botoes-fixos a:hover {
+    .menu-lateral button:hover {
       background: linear-gradient(to right, #532be0, #cc3cc0);
       transform: scale(1.05);
     }
 
-    .botao-ajuda {
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    p.subtitulo {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .cards {
       display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .botao-ajuda img {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-    }
-
-    /* Modal de Ajuda */
-    .modal-ajuda {
-      display: none; /* esconde por padrão */
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.7);
+      flex-wrap: wrap;
       justify-content: center;
-      align-items: center;
-      z-index: 2000;
+      gap: 20px;
     }
 
-    .modal-ajuda img {
-      max-width: 90%;
-      max-height: 90%;
+    .card {
+      background: linear-gradient(145deg, #ffffff, #f1f3f8);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      padding: 20px;
+      width: 300px;
+      transition: transform 0.2s;
+      flex: 1 1 calc(33.33% - 40px);
+      max-width: 300px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card span {
+      display: inline-block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .card h2 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+      color: #444;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
       border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      margin-bottom: 15px;
     }
 
-    .modal-ajuda .fechar {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      font-size: 30px;
+    .card a button {
+      background: linear-gradient(to right, #6e34f5, #e147d0);
+      border: none;
       color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 0.9rem;
       cursor: pointer;
+      transition: 0.3s;
     }
 
-    @media (max-width: 600px) {
-      .botoes-fixos {
-        flex-direction: row;
-        bottom: 10px;
-        left: 10px;
+    .card a button:hover {
+      opacity: 0.9;
+    }
+
+    footer {
+      background-color: #f0f0f0;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    @media (max-width: 768px) {
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 90%;
+        max-width: none;
+      }
+
+      header img {
+        height: auto;
+        max-height: 300px;
+      }
+
+      .menu-lateral {
+        display: none;
       }
     }
   </style>
 </head>
-<body>  <a href= "https://lucasdionisio.github.io/aprendabrincando/" 
-     style="
-      background: linear-gradient(45deg, #ff4b2b, #ff416c);
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 40px;
-      padding: 10px 24px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
-      font-size: 15px;
-      display: inline-block;
-     "
-     onmouseover="this.style.transform='scale(1.08)'; this.style.boxShadow='0 6px 14px rgba(255,65,108,0.4)'"
-     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 10px rgba(0,0,0,0.2)'">
-     ⬅️ VOLTAR
-  </a>
+<body>
 
-  <!-- Projeto JClic -->
-  <div class="JClic" data-project="duplo_t1.jclic"></div>
-
-  <!-- Botões fixos -->
-  <div class="botoes-fixos">
-    <a href="index.html"
-    <button class="botao-ajuda" onclick="abrirAjuda()">
-      <img src="ubundu-resized.jpg" alt="Ajuda">
-      Ajuda
-    </button>
+  <!-- MENU LATERAL -->
+  <div class="menu-lateral">
+    <a href="#topo"><button>Início ⬆️</button></a>
+    <a href="#jogos"><button>Ver Jogos 🎮</button></a>
   </div>
 
-  <!-- Modal da Ajuda -->
-  <div class="modal-ajuda" id="modalAjuda">
-    <span class="fechar" onclick="fecharAjuda()">×</span>
-    <img src="ubundu-resized.jpg" alt="Imagem de Ajuda">
-  </div>
+  <!-- BANNER -->
+  <header id="topo">
+    <img src="imagens/banneeraprendabrinccando.png" alt="Banner Aprenda Brincando">
+  </header>
 
-  <!-- Scripts -->
-  <script>
-    function abrirAjuda() {
-      document.getElementById('modalAjuda').style.display = 'flex';
-    }
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="container" id="jogos">
+    <h1>Jogos Lacunas no JClic</h1>
+    <p class="subtitulo">Escolha um dos jogos abaixo para começar. Eles foram pensados para unir aprendizado, raciocínio lógico e diversão em sala de aula.</p>
 
-    function fecharAjuda() {
-      document.getElementById('modalAjuda').style.display = 'none';
-    }
+    <!-- TODOS OS JOGOS ALINHADOS -->
+    <div class="cards">
 
-    // Fechar modal clicando fora da imagem
-    window.onclick = function(event) {
-      const modal = document.getElementById('modalAjuda');
-      if (event.target === modal) {
-        fecharAjuda();
-      }
-    }
-  </script>
+      <!-- CARD 1 -->
+      <div class="card">
+        <span>🎯 Jogo 1</span>
+        <img src="imagens/jogo1.png" alt="Desafio das Palavras">
+        <h2>Quebra Cabeça Lógico</h2>
+        <p>Trabalhe vocabulário e atenção com um desafio dinâmico e visualmente atrativo para os estudantes.</p>
+        <a href="Ident/index.html" target="_blank"><button>Jogar agora</button></a>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card">
+        <span>🌸 Jogo 2</span>
+        <img src="imagens/jogo3.png" alt="Complete as Lacunas">
+        <h2>Jogo de Palavras</h2>
+        <p>Aprenda para que serve cada peça do computador em um desafio educativo e divertido.</p>
+        <a href="COMPLEXA_LUCAS/index.html" target="_blank"><button>Jogar agora</button></a>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="card">
+        <span>🚀 Jogo 3</span>
+        <img src="imagens/Captura de tela 2025-12-02 141812.png" alt="Quebra-cabeça Lógico">
+        <h2>Quebra-cabeça Duplo</h2>
+        <p>Estimule o raciocínio lógico e a resolução de problemas em um ambiente lúdico e instigante.</p>
+        <a href="LACUNAWEB/index.html" target="_blank"><button>Jogar agora</button></a>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="card">
+        <span>🧠 Jogo 4</span>
+        <img src="imagens/indent.png" alt="Jogo de Lógica com Código">
+        <h2>Desafio de Lógica Visual</h2>
+        <p>Use pistas visuais para organizar blocos de código corretamente. Ideal para desenvolver raciocínio lógico e atenção aos detalhes.</p>
+        <a href="grelhab/index.html" target="_blank"><button>Jogar agora</button></a>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="card">
+        <span>🖥️ Jogo 5</span>
+        <img src="imagens/simples.png" alt="Identificação de Peças de Computador">
+        <h2>Monte seu Computador</h2>
+        <p>Um jogo interativo para ajudar os alunos a reconhecer e posicionar corretamente as principais peças do computador.</p>
+        <a href="simpless/index.html" target="_blank"><button>Jogar agora</button></a>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="card">
+        <span>📖 Jogo 6</span>
+        <img src="imagens/texto.png" alt="Jogo de Compreensão de Texto">
+        <h2>Missão: Texto Secreto</h2>
+        <p>Leia atentamente e preencha as lacunas para decifrar mensagens escondidas. Uma forma divertida de trabalhar leitura e interpretação.</p>
+        <a href="texto/index.html" target="_blank"><button>Jogar agora</button></a>
+      </div>
+
+      <!-- CARD 7 -->
+      <div class="card">
+        <span>🐧 Jogo 7</span>
+        <img src="imagens/ubundu-resized.jpg" alt="Ubuntu Educacional">
+        <h2>Ubuntu: Jogo Visual</h2>
+        <p>Aprender nunca foi tão divertido. Conheça esse desafio com tecnologia livre e acessível.</p>
+        <a href="QUEBRA_CABECA_DUPLO/index.html" target="_blank"><button>Jogar agora</button></a>
+      </div>
+
+      <!-- CARD 8 -->
+      <div class="card">
+        <span>🧩 Jogo 8</span>
+        <img src="imagens/caça 2025-12-02 135258.png" alt="Caça Palavras Ubuntu">
+        <h2>Caça Palavras Ubuntu</h2>
+        <p>Desafie os alunos com um caça palavras temático para reforçar o conteúdo de forma lúdica.</p>
+        <a href="c:\xampp\htdocs\pagina_lucas\Nova pasta\index.html" target="_blank"><button>Jogar agora</button></a>
+      </div>
+
+      <!-- CARD 9 -->
+      <div class="card">
+        <span>🍊 Jogo 9</span>
+        <img src="c:\xampp\htdocs\pagina_lucas\QUEBRA LARANJA\large-ubuntularanja_t1.png" alt="Caça Palavras Ubuntu Laranja">
+        <h2>Caça Palavras Ubuntu Laranja</h2>
+        <p>Outro desafio visual com foco em reforço de vocabulário usando a base do Ubuntu Educacional.</p>
+        <a href="c:\xampp\htdocs\pagina_lucas\QUEBRA LARANJA\index.html" target="_blank"><button>Jogar agora</button></a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    © 2025 Aprenda Brincando. Todos os direitos reservados para o Professor Lucas Dionísio.
+  </footer>
 
 </body>
 </html>
