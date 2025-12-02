@@ -1,0 +1,30 @@
+{
+  "title": "cuzadinha_T1",
+  "date": "27/11/2025",
+  "description": {},
+  "license": {
+    "pt-BR": "Licensed under a Creative Commons license <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0\">BY-NC-SA<\/a>"
+  },
+  "meta_langs": [
+    "pt-BR"
+  ],
+  "mainFile": "GREHAB_LUCAS_REFEITO.jclic",
+  "cover": "project-cover.jpg",
+  "thumbnail": "project-thumb.jpg",
+  "activities": 1,
+  "mediaFiles": 6,
+  "totalSize": 262545,
+  "files": [
+    "GREHAB_LUCAS_REFEITO.jclic",
+    "GREHAB_LUCAS_REFEITO.jclic.js",
+    "espaco.png",
+    "favicon.ico",
+    "icon-192.png",
+    "icon-72.png",
+    "imsmanifest.xml",
+    "index.html",
+    "project-cover.jpg",
+    "project-thumb.jpg",
+    "project.json"
+  ]
+}
