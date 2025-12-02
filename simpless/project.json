@@ -1,0 +1,35 @@
+{
+  "title": "pontualidade",
+  "date": "10/11/2025",
+  "description": {},
+  "license": {
+    "pt-BR": "Licensed under a Creative Commons license <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0\">BY-NC-SA<\/a>"
+  },
+  "meta_langs": [
+    "pt-BR"
+  ],
+  "mainFile": "SIMPLES_LUCAS_CORRIGIDA2.jclic",
+  "cover": "project-cover.jpg",
+  "thumbnail": "project-thumb.jpg",
+  "activities": 1,
+  "mediaFiles": 11,
+  "totalSize": 1012237,
+  "files": [
+    "SIMPLES_LUCAS_CORRIGIDA2.jclic",
+    "SIMPLES_LUCAS_CORRIGIDA2.jclic.js",
+    "favicon.ico",
+    "iamgaensdeplanodefundo-resized.jpg",
+    "icon-192.png",
+    "icon-72.png",
+    "impressora-resized.jpg",
+    "imsmanifest.xml",
+    "index.html",
+    "monitor.png",
+    "monitorpiscando-resized.jpg",
+    "mouse.png",
+    "project-cover.jpg",
+    "project-thumb.jpg",
+    "project.json",
+    "teclado.png"
+  ]
+}

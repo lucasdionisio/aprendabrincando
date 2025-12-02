@@ -18,7 +18,6 @@
       scroll-behavior: smooth;
     }
 
-    /* BANNER */
     header img {
       width: 100%;
       height: 680px;
@@ -26,7 +25,6 @@
       display: block;
     }
 
-    /* MENU LATERAL ESQUERDO */
     .menu-lateral {
       position: fixed;
       left: 20px;
@@ -60,7 +58,6 @@
       transform: scale(1.05);
     }
 
-    /* CONTEÚDO PRINCIPAL */
     .container {
       max-width: 1200px;
       margin: 30px auto;
@@ -93,6 +90,8 @@
       padding: 20px;
       width: 300px;
       transition: transform 0.2s;
+      flex: 1 1 calc(33.33% - 40px); /* 3 por linha com gap */
+      max-width: 300px;
     }
 
     .card:hover {
@@ -149,7 +148,6 @@
       color: #666;
     }
 
-    /* RESPONSIVO */
     @media (max-width: 768px) {
       .cards {
         flex-direction: column;
@@ -158,18 +156,7 @@
 
       .card {
         width: 90%;
-      }
-
-      h1 {
-        font-size: 1.5rem;
-      }
-
-      .card h2 {
-        font-size: 1.1rem;
-      }
-
-      .card p {
-        font-size: 0.9rem;
+        max-width: none;
       }
 
       header img {
@@ -178,14 +165,14 @@
       }
 
       .menu-lateral {
-        display: none; /* Esconde no celular */
+        display: none;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- MENU LATERAL ESQUERDO -->
+  <!-- MENU LATERAL -->
   <div class="menu-lateral">
     <a href="#topo"><button>Início ⬆️</button></a>
     <a href="#jogos"><button>Ver Jogos 🎮</button></a>
@@ -196,7 +183,7 @@
     <img src="imagens/banneeraprendabrinccando.png" alt="Banner Aprenda Brincando">
   </header>
 
-  <!-- CONTEÚDO PRINCIPAL -->
+  <!-- CONTEÚDO -->
   <main class="container" id="jogos">
     <h1>Jogos Lacunas no JClic</h1>
     <p class="subtitulo">Escolha um dos jogos abaixo para começar. Eles foram pensados para unir aprendizado, raciocínio lógico e diversão em sala de aula.</p>
@@ -231,6 +218,39 @@
         <h2>Quebra-cabeça Duplo</h2>
         <p>Estimule o raciocínio lógico e a resolução de problemas em um ambiente lúdico e instigante.</p>
         <a href="LACUNAWEB/index.html" target="_blank">
+          <button>Jogar agora</button>
+        </a>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="card">
+        <span>🧩 Jogo 4</span>
+        <img src="imagens/indent.png" alt="Jogo com Identação">
+        <h2>Identação Criativa</h2>
+        <p>Organize ideias de forma lógica e visual com esse desafio especial de identação.</p>
+        <a href="grelhab/index.html" target="_blank">
+          <button>Jogar agora</button>
+        </a>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="card">
+        <span>📝 Jogo 5</span>
+        <img src="imagens/simples.png" alt="Jogo Simples">
+        <h2>Lacunas Simples</h2>
+        <p>Complete frases com palavras-chave para reforçar o vocabulário técnico.</p>
+        <a href="simpless/index.html" target="_blank">
+          <button>Jogar agora</button>
+        </a>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="card">
+        <span>📚 Jogo 6</span>
+        <img src="imagens/texto.png" alt="Jogo de Texto">
+        <h2>Lacunas em Texto</h2>
+        <p>Preencha os espaços em branco para testar compreensão textual e contexto.</p>
+        <a href="lacunassopa/index.html" target="_blank">
           <button>Jogar agora</button>
         </a>
       </div>
