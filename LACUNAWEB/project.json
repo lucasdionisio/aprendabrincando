@@ -1,0 +1,34 @@
+{
+  "title": "lacunas_t1",
+  "date": "13/11/2025",
+  "description": {},
+  "license": {
+    "pt-BR": "Licensed under a Creative Commons license <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0\">BY-NC-SA<\/a>"
+  },
+  "meta_langs": [
+    "pt-BR"
+  ],
+  "mainFile": "lacunas_t1.jclic",
+  "cover": "project-cover.jpg",
+  "thumbnail": "project-thumb.jpg",
+  "activities": 3,
+  "mediaFiles": 10,
+  "totalSize": 1037229,
+  "files": [
+    "artigo_ia.png",
+    "favicon.ico",
+    "historia.jpg",
+    "icon-192.png",
+    "icon-72.png",
+    "imsmanifest.xml",
+    "index.html",
+    "java_y_python.png",
+    "lacunas_t1.jclic",
+    "lacunas_t1.jclic.js",
+    "large.png",
+    "project-cover.jpg",
+    "project-thumb.jpg",
+    "project.json",
+    "ubundu-resized1.jpg"
+  ]
+}

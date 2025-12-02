@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="porccentagem" version="0.1.3">
+ <settings>
+  <title>porccentagem</title>
+  <revision description="created" date="11/11/25" />
+  <descriptors />
+  <meta_langs>pt-BR</meta_langs>
+  <descriptions>
+   <description language="pt-BR" />
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="start" name="porcentagem" />
+ </sequence>
+ <activities>
+  <activity class="@associations.ComplexAssociation" name="porcentagem" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="5.3" markerStroke="5.0">
+      <font family="Arial" size="72" bold="true" />
+      <color foreground="0xFFFFFF" background="0x3333FF" inactive="0xFFFF33" border="0xFFFFFF" />
+     </style>
+     <p>Você tem 90 segundos ou 10 chances. Boa sote!</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="5.2" markerStroke="2.7">
+      <font family="Arial" size="72" italic="true" />
+      <color background="0xFFFF66" />
+     </style>
+     <media type="PLAY_AUDIO" level="1" file="parabensaudio.mp3" />
+     <p>Parabéns!!!</p>
+    </cell>
+    <cell type="finalError">
+     <style borderStroke="5.3" markerStroke="2.7">
+      <font family="Arial" size="72" italic="true" />
+      <color foreground="0xFFFFFF" background="0x666666" />
+     </style>
+     <p>Tente novamente.</p>
+    </cell>
+   </messages>
+   <settings margin="8" dragCells="true" maxTime="90" countDownTime="true" maxActions="10" countDownActions="true" report="true" reportActions="false">
+    <container bgColor="0x0033CC">
+     <image name="redesdecomputaddores-resized.jpg" tiled="true" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFF33" transparent="true" border="false">
+     <gradient source="0x6666FF" dest="0xFFFFFF" angle="0" />
+    </window>
+    <eventSounds>
+     <sound id="actionOk" file="parabensaudio.mp3" />
+     <sound id="finishedError" file="fail-234710.mp3" />
+     <sound id="finishedOk" file="error-126627.mp3" />
+    </eventSounds>
+    <skin file="@green.xml" />
+   </settings>
+   <cells rows="8" cols="1" cellWidth="391.0" cellHeight="77.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="8" />
+    <cell id="0">
+     <style borderStroke="5.3" markerStroke="2.7">
+      <font family="Arial" size="36" italic="true" />
+      <color foreground="0xFFFFFF" background="0x0033CC" border="0xFFFF00" />
+     </style>
+     <p>Switch</p>
+    </cell>
+    <cell id="2">
+     <style borderStroke="5.3" markerStroke="2.7">
+      <font family="Arial" size="36" italic="true" />
+      <color foreground="0xFFFFFF" background="0x0033CC" border="0xFFFF00" />
+     </style>
+     <p>IPV4</p>
+    </cell>
+    <cell id="1">
+     <style borderStroke="5.3" markerStroke="2.7">
+      <font family="Arial" size="36" italic="true" />
+      <color foreground="0xFFFFFF" background="0x0033CC" border="0xFFFF00" />
+     </style>
+     <p>Wi-Fi</p>
+    </cell>
+    <cell id="0">
+     <style borderStroke="5.3" markerStroke="2.7">
+      <font family="Arial" size="36" italic="true" />
+      <color foreground="0xFFFFFF" background="0x0033CC" border="0xFFFF00" />
+     </style>
+     <p>Roteador</p>
+    </cell>
+    <cell id="3">
+     <style borderStroke="5.3" markerStroke="2.7">
+      <font family="Arial" size="36" italic="true" />
+      <color foreground="0xFFFFFF" background="0x0033CC" border="0xFFFF00" />
+     </style>
+     <p>Firewall</p>
+    </cell>
+    <cell id="2">
+     <style borderStroke="5.3" markerStroke="2.7">
+      <font family="Arial" size="36" italic="true" />
+      <color foreground="0xFFFFFF" background="0x0033CC" border="0xFFFF00" />
+     </style>
+     <p>Endereço MAC</p>
+    </cell>
+    <cell id="1">
+     <style borderStroke="5.3" markerStroke="2.7">
+      <font family="Arial" size="36" italic="true" />
+      <color foreground="0xFFFFFF" background="0x0033CC" border="0xFFFF00" />
+     </style>
+     <p>Bluetooth</p>
+    </cell>
+    <cell id="1">
+     <style borderStroke="5.3" markerStroke="2.7">
+      <font family="Arial" size="36" italic="true" />
+      <color foreground="0xFFFFFF" background="0x0033CC" border="0xFFFF00" />
+     </style>
+     <p>Cabo de rede</p>
+    </cell>
+   </cells>
+   <cells rows="4" cols="1" cellWidth="253.0" cellHeight="183.0" border="true" id="secondary">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <style borderStroke="5.3" markerStroke="2.7">
+      <font family="Arial" size="36" italic="true" />
+      <color foreground="0xFFFFFF" background="0x0033CC" border="0xFFFF00" />
+     </style>
+     <p>Dispositivo de Rede</p>
+    </cell>
+    <cell>
+     <style borderStroke="5.3" markerStroke="2.7">
+      <font family="Arial" size="36" italic="true" />
+      <color foreground="0xFFFFFF" background="0x0033CC" border="0xFFFF00" />
+     </style>
+     <p>Tecnologia de Conexão</p>
+    </cell>
+    <cell>
+     <style borderStroke="5.3" markerStroke="2.7">
+      <font family="Arial" size="36" italic="true" />
+      <color foreground="0xFFFFFF" background="0x0033CC" border="0xFFFF00" />
+     </style>
+     <p>Endereçamento</p>
+    </cell>
+    <cell>
+     <style borderStroke="5.3" markerStroke="2.7">
+      <font family="Arial" size="36" italic="true" />
+      <color foreground="0xFFFFFF" background="0x0033CC" border="0xFFFF00" />
+     </style>
+     <p>Segurança de Rede</p>
+    </cell>
+   </cells>
+   <cells rows="8" cols="1" cellWidth="50.0" cellHeight="30.0" border="true" id="solvedPrimary">
+    <style />
+    <cell image="parabensparaberns-resized.jpg" />
+    <cell image="parabensparaberns-resized1.jpg" />
+    <cell image="parabensparaberns-resized1.jpg" />
+    <cell image="parabensparaberns-resized1.jpg" />
+    <cell image="parabensparaberns-resized1.jpg" />
+    <cell image="parabensparaberns-resized1.jpg" />
+    <cell image="parabensparaberns-resized1.jpg" />
+    <cell image="parabensparaberns-resized1.jpg" />
+   </cells>
+   <scramble times="31" primary="false" secondary="true" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="parabensparaberns-resized.jpg" file="parabensparaberns-resized.jpg" />
+  <media name="parabensparaberns-resized1.jpg" file="parabensparaberns-resized1.jpg" />
+  <media name="redesdecomputaddores-resized.jpg" file="redesdecomputaddores-resized.jpg" />
+  <media name="error-126627.mp3" file="error-126627.mp3" />
+  <media name="fail-234710.mp3" file="fail-234710.mp3" />
+  <media name="parabensaudio.mp3" file="parabensaudio.mp3" />
+ </mediaBag>
+</JClicProject>
+
