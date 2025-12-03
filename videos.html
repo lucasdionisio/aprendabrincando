@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vídeo Aulas - Aprenda Brincando</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f6fa;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    /* MENU LATERAL */
+    .menu-lateral {
+      position: fixed;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 1000;
+    }
+
+    .menu-lateral a {
+      text-decoration: none;
+    }
+
+    .menu-lateral button {
+      background: linear-gradient(to right, #6e34f5, #e147d0);
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .menu-lateral button:hover {
+      background: linear-gradient(to right, #532be0, #cc3cc0);
+      transform: scale(1.05);
+    }
+
+    /* BANNER (igual index) */
+    header img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    p.subtitulo {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    /* GRID DE VÍDEOS */
+    .videos-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .video-card {
+      background: linear-gradient(145deg, #ffffff, #f1f3f8);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      padding: 20px;
+      width: 48%;
+      max-width: 500px;
+      transition: transform 0.2s;
+    }
+
+    .video-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .video-desc {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    footer {
+      background-color: #f0f0f0;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    @media (max-width: 768px) {
+      .videos-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .video-card {
+        width: 90%;
+      }
+
+      header img {
+        height: 180px;
+      }
+
+      .menu-lateral {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MENU LATERAL -->
+  <div class="menu-lateral">
+    <a href="index.html"><button>Início ⬆️</button></a>
+    <a href="index.html#jogos"><button>Ver Jogos 🎮</button></a>
+  </div>
+
+  <!-- BANNER -->
+  <header>
+    <img src="imagens/banneeraprendabrinccando.png" alt="Banner Aprenda Brincando">
+  </header>
+
+  <main class="container">
+    <h1>Vídeo Aulas</h1>
+    <p class="subtitulo">Seleção de vídeos educativos para auxiliar seus alunos nas aulas.</p>
+
+    <div class="videos-grid">
+
+      <!-- VÍDEO 1 -->
+      <div class="video-card">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/0UtIE7n0FSg" allowfullscreen></iframe>
+        </div>
+        <p class="video-title">Problemas e Bugs do XAMPP</p>
+        <p class="video-desc">Aprenda a resolver erros comuns no XAMPP, MySQL, Apache e MariaDB.</p>
+      </div>
+
+      <!-- VÍDEO 2 -->
+      <div class="video-card">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/aeBfZsxbpZc" allowfullscreen></iframe>
+        </div>
+        <p class="video-title">Como usar MySQL no VSCode</p>
+        <p class="video-desc">Conecte e utilize MySQL direto no Visual Studio Code.</p>
+      </div>
+
+      <!-- VÍDEO 3 -->
+      <div class="video-card">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/7n69v3rCMZ4" allowfullscreen></iframe>
+        </div>
+        <p class="video-title">Como instalar o Git</p>
+        <p class="video-desc">Tutorial rápido para instalar e configurar o Git no Windows.</p>
+      </div>
+
+      <!-- VÍDEO 4 -->
+      <div class="video-card">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/nXUWqNS1KCc" allowfullscreen></iframe>
+        </div>
+        <p class="video-title">Dica rápida no VSCode</p>
+        <p class="video-desc">Ative recursos importantes e úteis no VSCode.</p>
+      </div>
+
+      <!-- VÍDEO 5 — IA PARA JOVENS -->
+      <div class="video-card">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/NOIrGsyJ72k" allowfullscreen></iframe>
+        </div>
+        <p class="video-title">O que é Inteligência Artificial?</p>
+        <p class="video-desc">Explicação simples, divertida e ideal para adolescentes.</p>
+      </div>
+
+      <!-- VÍDEO 6 — NOVO VÍDEO QUE VOCÊ MANDOU -->
+      <div class="video-card">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/AmMaZwoqjGw" allowfullscreen></iframe>
+        </div>
+        <p class="video-title">Vídeo Extra</p>
+        <p class="video-desc">Vídeo adicionado recentemente.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    © 2025 Aprenda Brincando. Todos os direitos reservados para o Professor Lucas Dionísio.
+  </footer>
+
+</body>
+</html>
