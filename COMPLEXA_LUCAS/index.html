@@ -1,40 +1,83 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <div style="background-color: #4aff19; text-align: center;">
-  <span style="font-size: 32px; color: #0000FF; font-weight: bold;"><b>
-    Associação de Conceitos – Redes de Computadores</b></span>
-</div>
-    <meta charset="UTF-8">
-    <title>porccentagem</title>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="porccentagem">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="icon" sizes="16x16" href="favicon.ico">
-    <link rel="icon" sizes="72x72" href="icon-72.png">
-    <link rel="icon" sizes="192x192" href="icon-192.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="https://clic.xtec.cat/dist/jclic.js/jclic.min.js"></script>
-  </head>
-  <body style="margin:0">
-    <div class ="JClic" data-project="porccentagem.jclic"></div>
-  </body>
-</html><!-- Botão VOLTAR -->
-  <a href= "https://lucasdionisio.github.io/aprendabrincando/" 
-     style="
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Porcentagem</title>
+
+  <!-- Metatags para compatibilidade com web apps -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Porcentagem">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Ícones -->
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" sizes="16x16" href="favicon.ico">
+  <link rel="icon" sizes="72x72" href="icon-72.png">
+  <link rel="icon" sizes="192x192" href="icon-192.png">
+
+  <!-- Script JClic -->
+  <script type="text/javascript" src="https://clic.xtec.cat/dist/jclic.js/jclic.min.js"></script>
+
+  <!-- Estilos -->
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      background-color: #4aff19;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .header span {
+      font-size: 32px;
+      color: #0000FF;
+      font-weight: bold;
+    }
+
+    .back-button {
       background: linear-gradient(45deg, #ff4b2b, #ff416c);
       color: white;
       text-decoration: none;
       font-weight: bold;
       border-radius: 40px;
       padding: 10px 24px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       transition: all 0.3s ease;
       font-size: 15px;
       display: inline-block;
-     "
-     onmouseover="this.style.transform='scale(1.08)'; this.style.boxShadow='0 6px 14px rgba(255,65,108,0.4)'"
-     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 10px rgba(0,0,0,0.2)'">
-     ⬅️ VOLTAR
-  </a>
+      margin: 20px;
+    }
+
+    .back-button:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 14px rgba(255, 65, 108, 0.4);
+    }
+
+    .JClic {
+      text-align: center;
+      margin: 40px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Cabeçalho -->
+  <div class="header">
+    <span>Associação de Conceitos – Redes de Computadores</span>
+  </div>
+
+  <!-- Botão Voltar -->
+  <div style="text-align: center;">
+    <a href="https://lucasdionisio.github.io/aprendabrincando/" class="back-button">⬅️ VOLTAR</a>
+  </div>
+
+  <!-- Projeto JClic -->
+  <div class="JClic" data-project="porccentagem.jclic"></div>
+
+</body>
+</html>

@@ -23,9 +23,7 @@
       z-index: 1000;
     }
 
-    .botoes-fixos button,
-    .botoes-fixos a {
-      text-decoration: none;
+    .botoes-fixos button {
       border: none;
       background: linear-gradient(to right, #6e34f5, #e147d0);
       color: white;
@@ -37,18 +35,14 @@
       transition: all 0.3s;
       text-align: center;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .botoes-fixos button:hover,
-    .botoes-fixos a:hover {
-      background: linear-gradient(to right, #532be0, #cc3cc0);
-      transform: scale(1.05);
-    }
-
-    .botao-ajuda {
       display: flex;
       align-items: center;
       gap: 8px;
+    }
+
+    .botoes-fixos button:hover {
+      background: linear-gradient(to right, #532be0, #cc3cc0);
+      transform: scale(1.05);
     }
 
     .botao-ajuda img {
@@ -59,7 +53,7 @@
 
     /* Modal de Ajuda */
     .modal-ajuda {
-      display: none; /* esconde por padrão */
+      display: none;
       position: fixed;
       top: 0;
       left: 0;
@@ -96,7 +90,10 @@
     }
   </style>
 </head>
-<body>  <a href= "https://lucasdionisio.github.io/aprendabrincando/" 
+<body>
+
+  <!-- Botão de voltar -->
+  <a href="file:///C:/xampp/htdocs/pagina_lucas/index.html" 
      style="
       background: linear-gradient(45deg, #ff4b2b, #ff416c);
       color: white;
@@ -108,7 +105,7 @@
       transition: all 0.3s ease;
       font-size: 15px;
       display: inline-block;
-     "
+      margin: 20px;"
      onmouseover="this.style.transform='scale(1.08)'; this.style.boxShadow='0 6px 14px rgba(255,65,108,0.4)'"
      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 10px rgba(0,0,0,0.2)'">
      ⬅️ VOLTAR
@@ -117,9 +114,8 @@
   <!-- Projeto JClic -->
   <div class="JClic" data-project="duplo_t1.jclic"></div>
 
-  <!-- Botões fixos -->
+  <!-- Botão de ajuda fixo -->
   <div class="botoes-fixos">
-    <a href="index.html"
     <button class="botao-ajuda" onclick="abrirAjuda()">
       <img src="ubundu-resized.jpg" alt="Ajuda">
       Ajuda
@@ -142,7 +138,7 @@
       document.getElementById('modalAjuda').style.display = 'none';
     }
 
-    // Fechar modal clicando fora da imagem
+    // Fecha o modal se clicar fora da imagem
     window.onclick = function(event) {
       const modal = document.getElementById('modalAjuda');
       if (event.target === modal) {

@@ -18,16 +18,18 @@
       scroll-behavior: smooth;
     }
 
+    /* BANNER */
     header img {
       width: 100%;
-      height: 680px;
+      height: 680px; /* 18cm aprox. */
       object-fit: cover;
       display: block;
     }
 
+    /* MENU LATERAL ESQUERDO */
     .menu-lateral {
       position: fixed;
-      left: 20px;
+      left: 20px; /* Agora no lado ESQUERDO */
       top: 50%;
       transform: translateY(-50%);
       display: flex;
@@ -58,6 +60,7 @@
       transform: scale(1.05);
     }
 
+    /* CONTEÚDO PRINCIPAL */
     .container {
       max-width: 1200px;
       margin: 30px auto;
@@ -90,8 +93,6 @@
       padding: 20px;
       width: 300px;
       transition: transform 0.2s;
-      flex: 1 1 calc(33.33% - 40px);
-      max-width: 300px;
     }
 
     .card:hover {
@@ -148,6 +149,7 @@
       color: #666;
     }
 
+    /* RESPONSIVO */
     @media (max-width: 768px) {
       .cards {
         flex-direction: column;
@@ -156,7 +158,18 @@
 
       .card {
         width: 90%;
-        max-width: none;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .card h2 {
+        font-size: 1.1rem;
+      }
+
+      .card p {
+        font-size: 0.9rem;
       }
 
       header img {
@@ -165,14 +178,14 @@
       }
 
       .menu-lateral {
-        display: none;
+        display: none; /* Esconde no celular */
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- MENU LATERAL -->
+  <!-- MENU LATERAL ESQUERDO -->
   <div class="menu-lateral">
     <a href="#topo"><button>Início ⬆️</button></a>
     <a href="#jogos"><button>Ver Jogos 🎮</button></a>
@@ -188,96 +201,45 @@
     <h1>Jogos Lacunas no JClic</h1>
     <p class="subtitulo">Escolha um dos jogos abaixo para começar. Eles foram pensados para unir aprendizado, raciocínio lógico e diversão em sala de aula.</p>
 
-    <!-- TODOS OS JOGOS ALINHADOS -->
     <div class="cards">
-
       <!-- CARD 1 -->
       <div class="card">
         <span>🎯 Jogo 1</span>
         <img src="imagens/jogo1.png" alt="Desafio das Palavras">
-        <h2>Quebra Cabeça Lógico</h2>
+        <h2>Qebra Cabeça Logico</h2>
         <p>Trabalhe vocabulário e atenção com um desafio dinâmico e visualmente atrativo para os estudantes.</p>
-        <a href="Ident/index.html" target="_blank"><button>Jogar agora</button></a>
+        <a href="importarhtml/indexhtmlbkp.html" target="_blank">
+          <button>Jogar agora</button>
+        </a>
       </div>
 
       <!-- CARD 2 -->
       <div class="card">
         <span>🌸 Jogo 2</span>
         <img src="imagens/jogo3.png" alt="Complete as Lacunas">
-        <h2>Jogo de Palavras</h2>
-        <p>Aprenda para que serve cada peça do computador em um desafio educativo e divertido.</p>
-        <a href="COMPLEXA_LUCAS/index.html" target="_blank"><button>Jogar agora</button></a>
+        <h2>Jogo de palavras</h2>
+        <p>Aprenda para que serve cada pesa de computador funciona.</p>
+        <a href="COMPLEXA_LUCAS/index.html" target="_blank">
+          <button>Jogar agora</button>
+        </a>
       </div>
 
       <!-- CARD 3 -->
       <div class="card">
         <span>🚀 Jogo 3</span>
-        <img src="imagens/lacunanovo.png" alt="Quebra-cabeça Lógico">
+        <img src="imagens/indent.png" alt="Quebra-cabeça Lógico">
         <h2>Quebra-cabeça Duplo</h2>
         <p>Estimule o raciocínio lógico e a resolução de problemas em um ambiente lúdico e instigante.</p>
-        <a href="LACUNAWEB/index.html" target="_blank"><button>Jogar agora</button></a>
+        <a href="LACUNAWEB/index.html">
+          <button>Jogar agora</button>
+        </a>
       </div>
-
-      <!-- CARD 4 -->
-      <div class="card">
-        <span>🧠 Jogo 4</span>
-        <img src="imagens/indent.png" alt="Jogo de Lógica com Código">
-        <h2>Desafio de Lógica Visual</h2>
-        <p>Use pistas visuais para organizar blocos de código corretamente. Ideal para desenvolver raciocínio lógico e atenção aos detalhes.</p>
-        <a href="grelhab/index.html" target="_blank"><button>Jogar agora</button></a>
-      </div>
-
-      <!-- CARD 5 -->
-      <div class="card">
-        <span>🖥️ Jogo 5</span>
-        <img src="imagens/simples.png" alt="Identificação de Peças de Computador">
-        <h2>Monte seu Computador</h2>
-        <p>Um jogo interativo para ajudar os alunos a reconhecer e posicionar corretamente as principais peças do computador.</p>
-        <a href="simpless/index.html" target="_blank"><button>Jogar agora</button></a>
-      </div>
-
-      <!-- CARD 6 -->
-      <div class="card">
-        <span>📖 Jogo 6</span>
-        <img src="imagens/texto.png" alt="Jogo de Compreensão de Texto">
-        <h2>Missão: Texto Secreto</h2>
-        <p>Leia atentamente e preencha as lacunas para decifrar mensagens escondidas. Uma forma divertida de trabalhar leitura e interpretação.</p>
-        <a href="texto/index.html" target="_blank"><button>Jogar agora</button></a>
-      </div>
-
-      <!-- CARD 7 -->
-      <div class="card">
-        <span>🐧 Jogo 7</span>
-        <img src="imagens/ubundu-resized.jpg" alt="Ubuntu Educacional">
-        <h2>Ubuntu: Jogo Visual</h2>
-        <p>Aprender nunca foi tão divertido. Conheça esse desafio com tecnologia livre e acessível.</p>
-        <a href="QUEBRA_CABECA_DUPLO/index.html" target="_blank"><button>Jogar agora</button></a>
-      </div>
-
-      <!-- CARD 8 -->
-      <div class="card">
-        <span>🧩 Jogo 8</span>
-        <img src="imagens/caça 2025-12-02 135258.png" alt="Caça Palavras Ubuntu">
-        <h2>Caça Palavras</h2>
-        <p>Desafie os alunos com um caça palavras temático para reforçar o conteúdo de forma lúdica.</p>
-        <a href="Nova pasta\index.html" target="_blank"><button>Jogar agora</button></a>
-      </div>
-
-      <!-- CARD 9 -->
-      <div class="card">
-        <span>🍊 Jogo 9</span>
-        <img src="imagens/large-ubuntularanja_t1.png" alt="Caça Palavras Ubuntu Laranja">
-        <h2>Caça Palavras Ubuntu</h2>
-        <p>Outro desafio visual com foco em reforço de vocabulário usando a base do Ubuntu Educacional.</p>
-        <a href="QUEBRA LARANJA/index.html" target="_blank"><button>Jogar agora</button></a>
-      </div>
-
     </div>
   </main>
 
   <!-- RODAPÉ -->
   <footer>
-    © 2025 Aprenda Brincando. Todos os direitos reservados para o Professor Lucas Dionísio.
+    © 2025 Aprenda Brincando. Todos os direitos reservados.
   </footer>
 
 </body>

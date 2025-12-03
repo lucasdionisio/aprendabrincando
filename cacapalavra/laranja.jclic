@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="laranja" version="0.1.3">
+ <settings>
+  <title>laranja</title>
+  <revision description="created" date="12/2/25" />
+  <descriptors />
+  <meta_langs>pt-BR</meta_langs>
+  <descriptions>
+   <description language="pt-BR" />
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="start" name="caca_palavras" />
+ </sequence>
+ <activities>
+  <activity class="@textGrid.WordSearch" name="caca_palavras" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style borderStroke="5.0" markerStroke="2.7">
+      <font family="Arial" size="28" bold="true" italic="true" />
+      <color background="0x0000CC" shadow="0xFFFFFF" border="0xCCFFFF" />
+     </style>
+     <p>ENCONTRE AS PALAVRAS EM 100 SEGUNDOS</p>
+    </cell>
+    <cell type="final">
+     <style borderStroke="0.7" markerStroke="2.7">
+      <font family="Arial" size="28" bold="true" italic="true" />
+      <color foreground="0xFFFFFF" background="0x33FF33" />
+     </style>
+     <p>PARABENS!!!</p>
+    </cell>
+    <cell type="finalError">
+     <style>
+      <font family="Arial" size="28" bold="true" italic="true" />
+      <color background="0xFF0000" />
+     </style>
+     <p>OPA,VAMOS TENTAR DE NOVO?</p>
+    </cell>
+   </messages>
+   <settings margin="8" maxTime="100" countDownTime="true" report="true" reportActions="false">
+    <helpWindow showSolution="true" />
+    <container bgColor="0xC0C0C0">
+     <image name="banneeraprendabrinccando - Copia-resized.jpg" tiled="true" />
+     <counters time="true" actions="false" score="false" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <textGrid rows="8" columns="10" cellWidth="198.0" cellHeight="154.0" border="true">
+    <style>
+     <font family="Arial" size="20" bold="true" italic="true" />
+     <color background="0xFFFFFF" shadow="0x00FF33" inactive="0x00FF33" alternative="0x00FF33" border="0xFFFF00" />
+    </style>
+    <text>
+     <row>**CPU***</row>
+     <row>********</row>
+     <row>****R***</row>
+     <row>PLACAMAE</row>
+     <row>****M***</row>
+     <row>**N*****</row>
+     <row>***U****</row>
+     <row>****V***</row>
+     <row>*****E**</row>
+     <row>UBUNTUM*</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">PLACAMAE</clue>
+    <clue id="1">RAM</clue>
+    <clue id="2">NUVEM</clue>
+    <clue id="3">UBUNTU</clue>
+    <clue id="4">CPU</clue>
+   </clues>
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="banneeraprendabrinccando - Copia-resized.jpg" file="banneeraprendabrinccando_-_copia-resized.jpg" />
+ </mediaBag>
+</JClicProject>
+

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Botão de Ajuda com Imagem Nova</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Botão */
+    .ajuda {
+      margin: 30px;
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #1e90ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      border: 4px solid white;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    .fechar {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botão de ajuda -->
+  <button class="ajuda" onclick="abrirModal()">AJUDA 💡</button>
+
+  <!-- Modal com a nova imagem -->
+  <div class="modal" id="modalAjuda">
+    <span class="fechar" onclick="fecharModal()">×</span>
+    <img src="large-ubuntularanja_t1.png" alt="Ajuda Ubuntu">
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    function abrirModal() {
+      document.getElementById("modalAjuda").style.display = "flex";
+    }
+
+    function fecharModal() {
+      document.getElementById("modalAjuda").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById("modalAjuda");
+      if (event.target === modal) {
+        fecharModal();
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+  <head>  <body style="margin:0">
+      <a href= "https://lucasdionisio.github.io/aprendabrincando/" 
+     style="
+      background: linear-gradient(45deg, #ff4b2b, #ff416c);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 40px;
+      padding: 10px 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      font-size: 15px;
+      display: inline-block;
+     "
+     onmouseover="this.style.transform='scale(1.08)'; this.style.boxShadow='0 6px 14px rgba(255,65,108,0.4)'"
+     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 10px rgba(0,0,0,0.2)'">
+     ⬅️ VOLTAR
+
+     
+  </a>
+    <meta charset="UTF-8">
+    <title>lacunasss</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="lacunasss">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" sizes="16x16" href="favicon.ico">
+    <link rel="icon" sizes="72x72" href="icon-72.png">
+    <link rel="icon" sizes="192x192" href="icon-192.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://clic.xtec.cat/dist/jclic.js/jclic.min.js"></script>
+  </head>
+  <body style="margin:0">
+    <div class ="JClic" data-project="lacunasss.jclic"></div>
+  </body>
+</html>
