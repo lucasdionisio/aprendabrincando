@@ -1,0 +1,36 @@
+{
+  "title": "avaliacao",
+  "date": "09/09/2025",
+  "description": {},
+  "license": {
+    "pt-BR": "Licensed under a Creative Commons license <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0\">BY-NC-SA<\/a>"
+  },
+  "meta_langs": [
+    "pt-BR"
+  ],
+  "mainFile": "IDENT_LUCAS.jclic",
+  "cover": "project-cover.jpg",
+  "thumbnail": "project-thumb.jpg",
+  "activities": 1,
+  "mediaFiles": 12,
+  "totalSize": 1329128,
+  "files": [
+    "IDENT_LUCAS.jclic",
+    "IDENT_LUCAS.jclic.js",
+    "cooler.png",
+    "favicon.ico",
+    "fonte.png",
+    "gabinete1.png",
+    "hdd6.png",
+    "icon-192.png",
+    "icon-72.png",
+    "imsmanifest.xml",
+    "index.html",
+    "project-cover.jpg",
+    "project-thumb.jpg",
+    "project.json",
+    "robloxscreenshot20250907_165334625-resized.jpg",
+    "ssd__solid_state_drive_.png",
+    "windows.png"
+  ]
+}
