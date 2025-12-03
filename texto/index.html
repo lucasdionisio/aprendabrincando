@@ -1,36 +1,77 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>texto_Lucas</title>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="texto_Lucas">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="icon" sizes="16x16" href="favicon.ico">
-    <link rel="icon" sizes="72x72" href="icon-72.png">
-    <link rel="icon" sizes="192x192" href="icon-192.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="https://clic.xtec.cat/dist/jclic.js/jclic.min.js"></script>
-  </head>
-  <body style="margin:0">
-<a href= "https://lucasdionisio.github.io/aprendabrincando/" 
-     style="
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>texto_Lucas</title>
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="texto_Lucas">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" sizes="16x16" href="favicon.ico">
+  <link rel="icon" sizes="72x72" href="icon-72.png">
+  <link rel="icon" sizes="192x192" href="icon-192.png">
+
+  <script type="text/javascript" src="https://clic.xtec.cat/dist/jclic.js/jclic.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f0f0f0;
+      padding: 20px;
+      position: relative;
+    }
+
+    .top-bar h1 {
+      margin: 0;
+      font-size: 32px;
+      color: #0000FF;
+      font-weight: bold;
+    }
+
+    .back-button {
+      position: absolute;
+      left: 20px;
       background: linear-gradient(45deg, #ff4b2b, #ff416c);
       color: white;
       text-decoration: none;
       font-weight: bold;
       border-radius: 40px;
       padding: 10px 24px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       transition: all 0.3s ease;
       font-size: 15px;
-      display: inline-block;
-     "
-     onmouseover="this.style.transform='scale(1.08)'; this.style.boxShadow='0 6px 14px rgba(255,65,108,0.4)'"
-     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 10px rgba(0,0,0,0.2)'">
-     ⬅️ VOLTAR
-  </a>
-    <div class ="JClic" data-project="sopa_lucas_quebracabeca2.jclic"></div>
-  </body>
+    }
+
+    .back-button:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 14px rgba(255, 65, 108, 0.4);
+    }
+
+    .JClic {
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Topo com botão e título -->
+  <div class="top-bar">
+    <a href="https://lucasdionisio.github.io/aprendabrincando/" class="back-button">⬅️ VOLTAR</a>
+    <h1>Complete as palavras</h1>
+  </div>
+
+  <!-- Atividade JClic -->
+  <div class="JClic" data-project="sopa_lucas_quebracabeca2.jclic"></div>
+</body>
 </html>
